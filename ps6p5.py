@@ -1,0 +1,8 @@
+print("enter quantity of item")
+q = int(input())
+print("enter unit price of the item")
+up = int(input())
+total = float(q * up)
+tax = float(total * .007)
+ta = float(total + tax)
+print("your total cost is " + str(total) + " your total + tax is " + str(ta))

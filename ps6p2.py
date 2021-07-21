@@ -1,0 +1,10 @@
+print("enter students last name.")
+l = str(input())
+print("enter exam score")
+e1 = int(input())
+print("enter secound exam score")
+e2 = int(input())
+print("enter third exam score")
+e3 = int(input())
+avs = (e1 * e2 * e3) / 3
+print("Your average score is = " + str(avs) + "and your scores are " + str(e1) + ", " + str(e2) + ", " + str(e3))

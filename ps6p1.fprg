@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="envy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-18 11:50:27 PM"/>
+        <attribute name="created" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNy0xODswNzo1MDo0MSBQTTsyODA2"/>
+        <attribute name="edited" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNy0xODsxMTo1MDoyNyBQTTsyOzI5MTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="dr" type="Real" array="False" size=""/>
+            <declare name="ep" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <output expression="&quot;enter quantity&quot;" newline="True"/>
+            <input variable="q"/>
+            <output expression="&quot;enter price&quot;" newline="True"/>
+            <input variable="p"/>
+            <assign variable="ep" expression="q * p"/>
+            <if expression="ep &gt; 100">
+                <then>
+                    <assign variable="dr" expression=".5"/>
+                    <output expression="&quot;your order is more then $100 so I added a discount of 50%&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="dr" expression=".2"/>
+                    <output expression="&quot;your order is less then 100 so you get a 20&amp; discount&quot;" newline="True"/>
+                </else>
+            </if>
+            <assign variable="d" expression="dr * ep"/>
+            <assign variable="total" expression="ep - d"/>
+            <output expression="&quot;your total after the discount is &quot; &amp; d &amp; &quot; and without the discount is &quot; &amp; ep" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
